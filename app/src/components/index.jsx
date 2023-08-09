@@ -1,5 +1,9 @@
-import ModalLogin from './modals/login/ModalLogin';
+import ModalLogin from './modals/login/ModalLogin.jsx';
+import ModalRegister from './modals/login/ModalRegister.jsx';
+import InputFile from './input/InputFile.jsx';
 
 export {
-    ModalLogin
+    ModalLogin,
+    ModalRegister,
+    InputFile
 };
