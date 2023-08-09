@@ -1,0 +1,15 @@
+.InputProps {
+    width: 100% !important;
+    padding: 10px !important;
+    border: 1px solid var(--input-border) !important;
+    border-radius: 4px !important;
+    margin-bottom: 10px !important;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .input {
+        padding: 8px; 
+      }
+  }
+  
