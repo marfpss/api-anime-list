@@ -1,0 +1,18 @@
+.ButtonProps {
+    background-color: var(--button-color) !important;
+    color: var(--text-color) !important;
+    padding: 10px 20px !important;
+    display: inline-block !important; 
+    border-radius: 6px !important;
+}
+
+.ButtonProps:hover {
+    background-color: var(--button-color-hover) !important;
+    color: var(--text-color-hover) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .ButtonProps {
+        padding: 8px 12px !important; 
+    }
+}

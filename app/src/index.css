@@ -1,0 +1,46 @@
+@import url(./root.css);
+
+* {
+  box-sizing: border-box;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--button-color-hover) var(--background);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+*::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--button-color-hover);
+  border-radius: 20px;
+  border: 1px solid var(--background);
+}
+
+
+html,
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background: var(--background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  *::-webkit-scrollbar {
+    width: 3px;
+  }
+}
