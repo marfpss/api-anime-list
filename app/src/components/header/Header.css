@@ -1,0 +1,23 @@
+
+  .ButtonProps {
+    width: 5.5rem !important;
+    height: 2.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-mobile {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 1rem !important;
+    }
+
+    .ButtonProps {
+        padding: 8px 12px !important; 
+    }
+
+   }

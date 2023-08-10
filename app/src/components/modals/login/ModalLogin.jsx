@@ -4,8 +4,6 @@ import ButtonProps from '../../button/ButtonProps';
 import './ModalLogin.css';
 import InputProps from '../../input/InputProps';
 
- 
-
 const ModalLogin = () => {
     return (
         <ChakraProvider>

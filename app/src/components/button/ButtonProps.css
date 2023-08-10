@@ -2,8 +2,12 @@
     background-color: var(--button-color) !important;
     color: var(--text-color) !important;
     padding: 10px 20px !important;
-    display: inline-block !important; 
     border-radius: 6px !important;
+    width: 5.5rem !important;
+    height: 2.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .ButtonProps:hover {
