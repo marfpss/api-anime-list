@@ -1,26 +1,32 @@
-import { RegisterPage , LoginPage , HomePage } from './page/';
+import React from 'react';
+import { ChakraProvider, CSSReset } from "@chakra-ui/react";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import theme from "./chakra.config";
+import { RegisterPage, LoginPage, HomePage } from './page/';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-      <Switch>
-      <Route exact path={["/", "/inicio", "/home"]}>
-            <Helmet>
-              <title>Illusion Squad | Início</title>
-            </Helmet>
+      <ChakraProvider theme={theme}>
+        <CSSReset /> 
+        <div className="App">
+          <Switch>
+            <Route exact path={["/", "/inicio", "/home"]}>
+              <Helmet>
+                <title>Illusion Squad | Início</title>
+              </Helmet>
               <HomePage />
-          </Route>
-      <Route exact path={["/login" , "/logar"]}>
-    <LoginPage />
-    </Route>
-    <Route exact path={["/register", "/registrar"]}>
-            <RegisterPage />
-          </Route>
-    </Switch>
-    </div>
+            </Route>
+            <Route exact path={["/login", "/logar"]}>
+              <LoginPage />
+            </Route>
+            <Route exact path={["/register", "/registrar"]}>
+              <RegisterPage />
+            </Route>
+          </Switch>
+        </div>
+      </ChakraProvider>
     </Router>
   );
 }
