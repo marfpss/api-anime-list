@@ -14,14 +14,21 @@ function App() {
           <Switch>
             <Route exact path={["/", "/inicio", "/home"]}>
               <Helmet>
-                <title>Illusion Squad | Início</title>
+                
+                <title>DEBVER | Home</title>
               </Helmet>
               <HomePage />
             </Route>
             <Route exact path={["/login", "/logar"]}>
+            <Helmet>
+                <title>DEBVER | Login</title>
+              </Helmet>
               <LoginPage />
             </Route>
             <Route exact path={["/register", "/registrar"]}>
+            <Helmet>
+                <title>DEBVER | Registra-se</title>
+              </Helmet>
               <RegisterPage />
             </Route>
           </Switch>

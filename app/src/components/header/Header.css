@@ -14,18 +14,21 @@
   font-weight: 900;
 }
 
-.logo-bg {
-  border-bottom: var(--primary-orange) solid 0.5rem;
+
+.colored-letter {
+  color: var(--primary-orange);
+  text-shadow: 2px 0px 2px #000000; 
+  transition: 0.5s !important;
 }
 
-.logo-bg:hover {
-  border-bottom: var(--hover-cinze) solid 0.5rem;
+.colored-letter:hover {
+  color: var(--hover-cinze)
 }
 
 .search {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
 }
 
 
