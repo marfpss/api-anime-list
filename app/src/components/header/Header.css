@@ -22,7 +22,8 @@
 }
 
 .colored-letter:hover {
-  color: var(--hover-cinze)
+  color: var(--hover-cinze);
+  border-bottom: 0.1rem solid var(--primary-orange);
 }
 
 .search {

@@ -21,16 +21,18 @@ p {
 .social-icons a {
   margin: 0 0.5rem;
   color: var(--primary-orange);
-  transition: 0.5s;
+  transition: 0.5s !important;
 }
 
 .social-icons a:hover {
   color: var(--hover-cinze);
+  border-bottom: 0.1rem solid var(--primary-orange);
 }
 
 .footer-container .copyright {
   margin-top: 0.8rem;
   font-size: 1rem;
+  font-weight: 100;
 }
 
 @media (max-width: 768px) {

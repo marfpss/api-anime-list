@@ -3,19 +3,13 @@ import {
   Box,
   ChakraProvider,
   VStack,
-  Flex,
-  Spacer,
-  Checkbox,
-  Text,
   Input,
-  IconButton,
   InputGroup,
   InputLeftElement,
+  Checkbox,
 } from "@chakra-ui/react";
 import { EmailIcon, LockIcon } from "@chakra-ui/icons";
 import ButtonProps from "../../button/ButtonProps";
-import "./ModalLogin.css";
-import InputProps from "../../input/InputProps";
 import axios from "axios";
 
 const ModalLogin = () => {
@@ -27,31 +21,15 @@ const ModalLogin = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://ec2-18-191-223-138.us-east-2.compute.amazonaws.com:8080/anime-api/login",
+        "http://ec2-18-191-223-138.us-east-2.compute.amazonaws.com:8080/anime-api/v1/auth/login",
         {
-          email,
-          password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
+          email: email,
+          password: password,
         }
       );
-
-      if (response.status === 200) {
-        const { token } = response.data;
-        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        console.log("Login bem-sucedido");
-        setErrorMessage("");
-      } else {
-        console.error("Erro ao efetuar login");
-        setErrorMessage("Erro ao efetuar login");
-      }
+      
     } catch (error) {
-      console.error("Erro ao efetuar login:", error);
-      setErrorMessage("Erro ao efetuar login");
+      setErrorMessage("Falha no login. Verifique suas credenciais.");
     }
   };
 
