@@ -3,19 +3,14 @@ import { Box, Flex, Input, IconButton, Menu, MenuButton, MenuList, MenuItem } fr
 import { SearchIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom'; 
 import './Header.css';
+import { Logo } from '../../components';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Flex className="header" align="center" justify="space-between">
-      <div className='logo-bg'>
-        <Link to="/"> 
-          <Box className="logo">
-            D<span className="colored-letter"></span>EB<span className="colored-letter">V</span>ER
-          </Box>
-        </Link>
-      </div>
+      <Logo />
       <Box className="search">
         <Input placeholder="Search For Anime" _placeholder={{ color: 'black' }} variant="filled" background="brand.orange" />
         <IconButton icon={<SearchIcon />} background="brand.orange" />
