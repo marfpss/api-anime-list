@@ -1,44 +1,112 @@
 .modal-container {
-    padding: 1rem;
-    text-align: center;
-    background-color: var(--background-modal);
-    color: var(--text-color-dark);
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--background-modal);
+  color: var(--text-color-dark);
+}
+
+.modal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;  
+}
+
+.modal-container-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem; 
+}
+
+.icon {
+  width: 2rem;  
+  height: 2rem;  
 }
 
 .modal-container-title {
-    margin: 0.5rem;
-    margin-top: 6rem;
-    font-weight: 600;
-    font-size: 5rem; 
-    color: var(--text-color-dark);
+  margin: 0.5rem;
+  margin-top: 6rem;
+  font-weight: 600;
+  font-size: 5rem; 
+  color: var(--text-color-dark);
 }
 
 .modal-container-text {
-    font-weight: 100;
-    font-size: 1.5rem;
-    color: var(--text-color-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--text-color-dark);
 }
 
 .modal-container-button {
-    background-color: var(--button-color) !important;
-    color: var(--text-color) !important;
+  background-color: var(--button-color) !important;
+  color: var(--text-color) !important;
 }
 
 .modal-container-button:hover {
-    background-color: var(--button-color-hover) !important;
-    color: var(--text-color-hover) !important;
+  background-color: var(--button-color-hover) !important;
+  color: var(--text-color-hover) !important;
 }
 
 @keyframes moveUpDown {
-    0%, 100% {
+  0%, 100% {
       transform: translateY(0);
-    }
-    50% {
+  }
+  50% {
       transform: translateY(-10px);
-    }
   }
-  
-  .mouse-icon {
-    animation: moveUpDown 2s infinite; 
+}
+
+.icon-fixed-bottom.hide-animation {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
   }
-  
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+.mouse-icon , .touch-icon {
+  animation: moveUpDown 2s infinite; 
+  cursor: none;
+}
+
+.icon-fixed-bottom {
+  position: fixed;
+  bottom: 20px;  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;  
+}
+
+.icon-fixed-bottom.visible {
+  display: block;
+  opacity: 1;
+}
+
+.icon-fixed-bottom.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+      padding: 0.2rem; 
+  }
+  .modal-container-title {
+      margin: 1rem;
+      margin-top: 3rem;
+      font-size: 2rem; 
+  }
+  .modal-container-text {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+  }
+}
