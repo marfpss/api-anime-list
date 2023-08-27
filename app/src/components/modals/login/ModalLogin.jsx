@@ -62,7 +62,7 @@ const ModalLogin = () => {
             />
           </InputGroup>
           <Checkbox
-            colorScheme="orange"
+            colorScheme="brand.orange"
             defaultChecked={rememberPassword}
             onChange={() => setRememberPassword(!rememberPassword)}
           >

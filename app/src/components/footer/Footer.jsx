@@ -1,7 +1,7 @@
 import React from "react";
 import { Box , Text , Flex, Link, Center } from '@chakra-ui/react';
 import './Footer.css';
-import { FaInstagram, FaTwitter, FaDiscord, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import {Logo} from "../../components";
 
 const Footer = () => {
@@ -16,10 +16,7 @@ const Footer = () => {
                <FaInstagram />
             </Link>
             <Link href="#">
-               <FaTwitter />
-            </Link>
-            <Link href="#">
-               <FaDiscord />
+               <FaGithub />
             </Link>
             <Link href="#">
                <FaLinkedin />

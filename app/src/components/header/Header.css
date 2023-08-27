@@ -2,7 +2,7 @@
   padding: 1rem;
   background-color: var(--background-modal);
   color: var(--text-color-dark);
-  /* border-bottom: 0.4rem solid var(--primary-orange); */
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
 /* .header:hover {

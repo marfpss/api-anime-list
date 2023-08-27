@@ -1,0 +1,44 @@
+.modal-container {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--background-modal);
+    color: var(--text-color-dark);
+}
+
+.modal-container-title {
+    margin: 0.5rem;
+    margin-top: 6rem;
+    font-weight: 600;
+    font-size: 5rem; 
+    color: var(--text-color-dark);
+}
+
+.modal-container-text {
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--text-color-dark);
+}
+
+.modal-container-button {
+    background-color: var(--button-color) !important;
+    color: var(--text-color) !important;
+}
+
+.modal-container-button:hover {
+    background-color: var(--button-color-hover) !important;
+    color: var(--text-color-hover) !important;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .mouse-icon {
+    animation: moveUpDown 2s infinite; 
+  }
+  

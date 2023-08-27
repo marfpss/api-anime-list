@@ -113,7 +113,7 @@ const ModalRegister = () => {
           </InputGroup>
           <Flex align="center">
             <Checkbox
-              colorScheme="orange"
+              colorScheme="brand.orange"
               isChecked={acceptTerms}
               onChange={() => setAcceptTerms(!acceptTerms)}
             />
