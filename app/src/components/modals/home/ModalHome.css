@@ -28,9 +28,15 @@
   margin: 0.5rem;
   margin-top: 6rem;
   font-weight: 600;
-  font-size: 5rem; 
+  font-size: 5rem;
   color: var(--text-color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
+
 
 .modal-container-text {
   margin-bottom: 1.5rem;
@@ -58,6 +64,7 @@
   }
 }
 
+
 .icon-fixed-bottom.hide-animation {
   animation: fadeOut 1s ease-in-out forwards;
 }
@@ -82,7 +89,7 @@
   bottom: 20px;  
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;  
+  /* z-index: 1000;   */
 }
 
 .icon-fixed-bottom.visible {

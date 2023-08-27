@@ -8,6 +8,7 @@ import ButtonProps from '../../button/ButtonProps';
 const ModalHome = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [iconsVisible, setIconsVisible] = useState(true);
+    const [isBlinking, setIsBlinking] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,17 +24,27 @@ const ModalHome = () => {
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
 
+        const blinkInterval = setInterval(() => {
+            setIsBlinking(prevIsBlinking => !prevIsBlinking);
+        }, 800); 
+
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
+            clearInterval(blinkInterval);
         };
     }, []);
 
     return (
         <Box className="modal-container" style={{ height: '100vh' }}>
-           <h1 className="modal-container-title">
-               Transformando desejos em maratonas!
-           </h1>
+            <h1 className="modal-container-title">
+                <span className="typewriter-animation">
+                    Transformando desejos em maratonas!{isBlinking && '|'}
+                </span>
+                
+            </h1>
+
+
             <p className="modal-container-text">
                 Crie sua wish list de animes favoritos e mergulhe em momentos inesquecíveis.
             </p>
