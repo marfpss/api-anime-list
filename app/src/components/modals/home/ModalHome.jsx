@@ -37,6 +37,7 @@ const ModalHome = () => {
 
     return (
         <Box className="modal-container" style={{ height: '100vh' }}>
+            <div className='modal-container-center'> 
             <h1 className="modal-container-title">
                 <span className="typewriter-animation">
                     Transformando desejos em maratonas!{isBlinking && '|'}
@@ -48,7 +49,7 @@ const ModalHome = () => {
             <p className="modal-container-text">
                 Crie sua wish list de animes favoritos e mergulhe em momentos inesquecíveis.
             </p>
-            <ButtonProps className='modal-container-button'>Inscreva-se</ButtonProps>
+            <ButtonProps className='modal-container-button' size="lg" >Inscreva-se</ButtonProps>
             <div className="modal-container-icons">
                 <span>
                     <Icon as={FaInstagram} boxSize="7" className="icon" marginRight="1rem" />
@@ -63,7 +64,9 @@ const ModalHome = () => {
                     <Icon as={MdMouse} boxSize="8" className="mouse-icon" />
                 )}
             </div>
+            </div>
         </Box>
+
     );
 };
 

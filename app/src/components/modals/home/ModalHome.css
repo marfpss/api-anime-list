@@ -1,3 +1,4 @@
+
 .modal-container {
   padding: 1rem;
   text-align: center;
@@ -5,28 +6,26 @@
   color: var(--text-color-dark);
 }
 
-.modal-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;  
+.modal-container-center {
+  margin-top: 8rem !important;
 }
 
 .modal-container-icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem; 
+  margin-top: 1rem;
 }
 
 .icon {
-  width: 2rem;  
-  height: 2rem;  
+  width: 2rem;
+  height: 2rem;
 }
 
 .modal-container-title {
-  margin: 0.5rem;
-  margin-top: 6rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  position: relative;
   font-weight: 600;
   font-size: 5rem;
   color: var(--text-color-dark);
@@ -35,11 +34,12 @@
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
+  line-height: 1;
 }
 
-
 .modal-container-text {
-  margin-bottom: 1.5rem;
+  margin: 1rem;
+  margin-bottom: 1rem;
   font-weight: 100;
   font-size: 1.5rem;
   color: var(--text-color-dark);
@@ -48,6 +48,7 @@
 .modal-container-button {
   background-color: var(--button-color) !important;
   color: var(--text-color) !important;
+  width: 150px;
 }
 
 .modal-container-button:hover {
@@ -57,39 +58,18 @@
 
 @keyframes moveUpDown {
   0%, 100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
-}
-
-
-.icon-fixed-bottom.hide-animation {
-  animation: fadeOut 1s ease-in-out forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-      display: none;
-  }
-}
-
-.mouse-icon , .touch-icon {
-  animation: moveUpDown 2s infinite; 
-  cursor: none;
 }
 
 .icon-fixed-bottom {
   position: fixed;
-  bottom: 20px;  
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  /* z-index: 1000;   */
 }
 
 .icon-fixed-bottom.visible {
@@ -103,17 +83,41 @@
   pointer-events: none;
 }
 
+.icon-fixed-bottom.hide-animation {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.mouse-icon, .touch-icon {
+  animation: moveUpDown 2s infinite;
+  cursor: none;
+}
+
 @media (max-width: 768px) {
   .modal-container {
-      padding: 0.2rem; 
+    padding: 0.2rem;
   }
   .modal-container-title {
-      margin: 1rem;
-      margin-top: 3rem;
-      font-size: 2rem; 
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
   }
   .modal-container-text {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
+    margin: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
