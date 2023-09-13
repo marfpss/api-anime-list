@@ -29,14 +29,26 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
+  
 }
 
 #root {
-  background: var(--background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: fit-content;
-  min-height: 100vh;
+  background: linear-gradient(45deg, #FFA500, #ff7300 , #ff4d00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {

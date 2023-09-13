@@ -3,59 +3,31 @@ import {
   Box,
   ChakraProvider,
   VStack,
-  Flex,
-  Spacer,
-  Checkbox,
-  Text,
   Input,
-  IconButton,
   InputGroup,
   InputLeftElement,
+  Checkbox,
+  Text,
 } from "@chakra-ui/react";
 import { EmailIcon, LockIcon, AddIcon } from "@chakra-ui/icons";
 import ButtonProps from "../../button/ButtonProps";
 import "./ModalRegister.css";
-import axios from "axios";
 
 const ModalRegister = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [bio, setBio] = useState("");
-  const [profileImageUrl, setProfileImageUrl] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [registrationStatus, setRegistrationStatus] = useState(null);
 
-  const handleRegister = async () => {
-    try {
-      const response = await axios.post(
-        "http://ec2-18-191-223-138.us-east-2.compute.amazonaws.com:8080/anime-api/v1/auth/register",
-        {
-          name: fullName,
-          email,
-          password,
-          profile: {
-            bio,
-            img_url: profileImageUrl,
-          },
-          role: "role_client",
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
-
-      if (response.status === 201) {
-        setRegistrationStatus("success");
-      } else {
-        setRegistrationStatus("error");
-      }
-    } catch (error) {
-      console.error("Erro ao efetuar o registro:", error);
+  const handleRegister = () => {
+    
+    if (fullName && email && password && password === confirmPassword && acceptTerms) {
+   
+      setRegistrationStatus("success");
+    } else {
+     
       setRegistrationStatus("error");
     }
   };
@@ -111,15 +83,13 @@ const ModalRegister = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </InputGroup>
-          <Flex align="center">
-            <Checkbox
-              colorScheme="brand.orange"
-              isChecked={acceptTerms}
-              onChange={() => setAcceptTerms(!acceptTerms)}
-            />
-            <Box ml="2">Aceitar termos de uso</Box>
-            <Spacer />
-          </Flex>
+          <Checkbox
+            colorScheme="orange"
+            isChecked={acceptTerms}
+            onChange={() => setAcceptTerms(!acceptTerms)}
+          >
+            Aceitar termos de uso
+          </Checkbox>
           <ButtonProps onClick={handleRegister}>Cadastrar</ButtonProps>
           {registrationStatus === "success" && (
             <Text color="green">Registro bem-sucedido!</Text>
