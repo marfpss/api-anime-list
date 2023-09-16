@@ -9,7 +9,6 @@ function Logo({ textColor, backgroundColor, fontSize, borderColor }) {
     fontSize: fontSize || '24px',  
     border: `2px solid ${borderColor || 'transparent'}`, 
   };
-
   return (
     <div className='logo-bg'>
       <Link to="/">

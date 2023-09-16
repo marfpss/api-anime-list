@@ -1,7 +1,7 @@
 :root {
-    --primary-orange: #FFA500;
+    --primary-orange: #FEBE01;
     --primary-yellow: #FFFF00;
-    --button-color: #FFA500;
+    --button-color: #FEBE01;
     --button-color-hover: #e99803;
     --hover-cinze: #CBD5E0;
     --text-color: #fff; 
@@ -12,7 +12,7 @@
     --red-button: #FF0000;
     --delete-button: #FF0000;
     --confirm-button: #32CD32;
-    --highlight-color: #FFA500;
+    --highlight-color: #FEBE01;
     --sidebar-background: #1E1E1E;
     --sidebar-text: #FFFFFF;
     --highlight-yellow: #FFD700;
@@ -34,7 +34,7 @@
     --dark-mode-background: #121212;
     --dark-mode-text: #FFFFFF;
     --dark-mode-sidebar: #171717;
-    --dark-mode-highlight: #FFA500;
+    --dark-mode-highlight: #FEBE01;
     --dark-mode-gray: #888888;
     --background-modal: #ffffff;
   }

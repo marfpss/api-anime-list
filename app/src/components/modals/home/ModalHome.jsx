@@ -4,11 +4,21 @@ import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdMouse, MdTouchApp } from 'react-icons/md';
 import './ModalHome.css';
 import ButtonProps from '../../button/ButtonProps';
+import SignUp from '../enrollment/SignUp';
 
 const ModalHome = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [iconsVisible, setIconsVisible] = useState(true);
     const [isBlinking, setIsBlinking] = useState(true);
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+
+    const openSignUpModal = () => {
+        setIsSignUpModalOpen(true);
+    };
+
+    const closeSignUpModal = () => {
+        setIsSignUpModalOpen(false);
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -45,11 +55,12 @@ const ModalHome = () => {
                 
             </h1>
 
-
             <p className="modal-container-text">
                 Crie sua wish list de animes favoritos e mergulhe em momentos inesquecíveis.
             </p>
-            <ButtonProps className='modal-container-button' size="lg" >Inscreva-se</ButtonProps>
+
+            <ButtonProps className='modal-container-button' size="lg" onClick={openSignUpModal}>Inscreva-se</ButtonProps>
+
             <div className="modal-container-icons">
                 <span>
                     <Icon as={FaInstagram} boxSize="7" className="icon" marginRight="1rem" />
@@ -57,6 +68,7 @@ const ModalHome = () => {
                     <Icon as={FaLinkedin} boxSize="7" className="icon" />
                 </span>
             </div>
+
             <div className={`icon-fixed-bottom ${iconsVisible ? 'visible' : 'hidden'} ${!iconsVisible ? 'hide-animation' : ''}`}>
                 {isMobile ? (
                     <Icon as={MdTouchApp} boxSize="9" className="touch-icon" />
@@ -65,8 +77,12 @@ const ModalHome = () => {
                 )}
             </div>
             </div>
-        </Box>
 
+            
+            {isSignUpModalOpen && (
+                <SignUp isOpen={isSignUpModalOpen} onClose={closeSignUpModal} />
+            )}
+        </Box>
     );
 };
 
