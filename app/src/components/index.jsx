@@ -5,6 +5,7 @@ import ModalRegister from './modals/login/ModalRegister.jsx';
 import ModalHome from './modals/home/ModalHome.jsx';
 import InputFile from './input/InputFile.jsx';
 import Logo from './logo/logo.jsx';
+import Faqs from './modals/home/Faqs.jsx';
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     ModalRegister,
     ModalHome,
     InputFile,
-    Logo
+    Logo,
+    Faqs
 };

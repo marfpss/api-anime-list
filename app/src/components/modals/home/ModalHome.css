@@ -102,6 +102,8 @@
   cursor: none;
 }
 
+
+
 @media (max-width: 768px) {
   .modal-container {
     padding: 0.2rem;

@@ -8,7 +8,9 @@ const Footer = () => {
   return (
     <footer>
      <Box pb="80px" className="footer-container">
-      <Logo />
+  <div className="logo">
+  <Logo />
+  </div>
         <p>Sobre nos</p>
         <Center>
         <Flex className="social-icons">
