@@ -27,7 +27,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose} size="md">
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader fontSize="2xl">Inscreva-se</ModalHeader>
+        <ModalHeader fontSize="2xl">Cadastro</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack spacing={4} isFullWidth>

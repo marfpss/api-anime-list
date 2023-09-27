@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChakraProvider, Container, Center } from '@chakra-ui/react';
-import { Header , Footer , ModalHome , Faqs } from '../../../components';
+import { Header , Footer , ModalHome } from '../../../components';
 
 
 const HomePage = () => {
@@ -8,7 +8,6 @@ const HomePage = () => {
     <div>
      <Header />
      <ModalHome />
-     <Faqs />
      <Footer />
     </div>
   );

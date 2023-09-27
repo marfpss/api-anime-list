@@ -3,7 +3,7 @@ import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import theme from "./chakra.config";
-import { RegisterPage, LoginPage, HomePage, NotFoundPage } from './page/';
+import { RegisterPage, LoginPage, HomePage, NotFoundPage , GitHubCommits} from './page/';
 
 function App() {
   return (
@@ -29,6 +29,12 @@ function App() {
                 <title>DEBVER | Registra-se</title>
               </Helmet>
               <RegisterPage />
+            </Route>
+            <Route exact path={["/dev/logs"]}>
+            <Helmet>
+              <title>DEBVER | DEV | LOGS</title>
+            </Helmet>
+            <GitHubCommits />
             </Route>
             <Route path="/404">
               <Helmet>
